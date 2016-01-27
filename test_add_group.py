@@ -1,10 +1,10 @@
-from selenium import WebDriver
+from selenium import webdriver
 import unittest
 from group import Group
 
 class Add_group(unittest.TestCase):
     def setUp(self):
-        self.driver = WebDriver()
+        self.driver = webdriver.Firefox()
         self.driver.implicitly_wait(60)
 
     def open_home_page(self, driver):
