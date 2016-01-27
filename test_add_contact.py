@@ -53,7 +53,6 @@ class Add_contact(unittest.TestCase):
         self.open_new_contact_page(driver)
         self.create_contact(driver, Contact(firstname = "Igor", middlename = "von", lastname = "V", nickname = "Thomas",
             address = "Blyuhera 7", mobile = "0936629380", email = "ivv@test.com"))
-        self.return_to_groups_page(driver)
         self.logout(driver)        
     
     def logout(self, driver):
