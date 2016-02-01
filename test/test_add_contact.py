@@ -1,7 +1,5 @@
 import unittest
-
 from selenium import webdriver
-
 from model.group import Contact
 
 
