@@ -1,5 +1,3 @@
-__author__ = 'thomas'
-
 class GroupHelper:
 
     def __init__(self, app):
@@ -7,7 +5,7 @@ class GroupHelper:
 
 
     def open_groups_page(self):
-        driver = self.driver
+        driver = self.app.driver
         driver.find_element_by_link_text("groups").click()
 
     def create(self, group):

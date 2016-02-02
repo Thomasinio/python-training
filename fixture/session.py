@@ -1,13 +1,11 @@
-__author__ = 'thomas'
-
 class SessionHelper:
 
     def __init__(self, app):
         self.app = app
 
     def login(self, username, password):
-        driver = self.driver
-        self.app.open_home_page(driver)
+        driver = self.app.driver
+        self.app.open_home_page()
         driver.find_element_by_name("user").click()
         driver.find_element_by_name("user").clear()
         driver.find_element_by_name("user").send_keys(username)
@@ -17,5 +15,5 @@ class SessionHelper:
         driver.find_element_by_xpath("//form[@id='LoginForm']/input[3]").click()
 
     def logout(self):
-        driver = self.driver
+        driver = self.app.driver
         driver.find_element_by_link_text("Logout").click()
