@@ -1,6 +1,6 @@
 import unittest
 from selenium import webdriver
-from model.group import Contact
+from model.contact import Contact
 
 
 class Add_contact(unittest.TestCase):
