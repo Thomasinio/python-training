@@ -32,3 +32,9 @@ class ContactHelper:
         driver.find_element_by_name("email").clear()
         driver.find_element_by_name("email").send_keys(group.email)
         driver.find_element_by_xpath("//div[@id='content']/form/input[21]").click()
+
+    def delete_first_contact(self):
+        driver = self.app.driver
+        driver.find_element_by_name("selected[]").click()
+        driver.find_element_by_xpath(".//*[@id='content']/form[2]/div[2]/input").click()
+        driver.switch_to_alert().accept()
